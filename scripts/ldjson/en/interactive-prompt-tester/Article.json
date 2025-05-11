@@ -3,10 +3,10 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://metaprompt.deepsseek.diy/terms"
+    "@id": "https://metaprompt.deepsseek.diy/interactive-prompt-tester"
   },
-  "headline": "Terms of Service - MetaMind Hub",
-  "description": "Read the Terms of Service for MetaMind Hub. Understand your rights and responsibilities when using our platform.",
+  "headline": "Interactive Prompt Tester - MetaMind Hub",
+  "description": "Test and refine your AI prompts in real-time with the Interactive Prompt Tester from MetaMind Hub.",
   "image": "https://metaprompt.deepsseek.diy/img/logo.svg",
   "author": {
     "@type": "Organization",

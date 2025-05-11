@@ -1,20 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://websimstarter.borninsea.com/privacy</loc>
-        <lastmod>2025-05-08</lastmod>
+        <loc>https://metaprompt.deepsseek.diy/app/community</loc>
+        <lastmod>2025-05-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://websimstarter.borninsea.com/terms</loc>
-        <lastmod>2025-05-08</lastmod>
+        <loc>https://metaprompt.deepsseek.diy/app/dashboard</loc>
+        <lastmod>2025-05-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://websimstarter.borninsea.com</loc>
-        <lastmod>2025-05-09</lastmod>
+        <loc>https://metaprompt.deepsseek.diy/app/editor</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/app/evaluation</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/interactive-prompt-tester</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/privacy</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/terms</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/zh/app/community</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/zh/app/dashboard</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/zh/app/editor</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/zh/app/evaluation</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/zh/interactive-prompt-tester</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/zh/privacy</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/zh/terms</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy</loc>
+        <lastmod>2025-05-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://metaprompt.deepsseek.diy/zh</loc>
+        <lastmod>2025-05-11</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>

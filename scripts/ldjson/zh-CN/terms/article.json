@@ -1,8 +1,26 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "服务条款页",
-  "author": {"@type": "Organization", "name": "HeyManifestation"},
-  "datePublished": "2024-01-01",
-  "mainEntityOfPage": "https://visionboard.heymanifestation.com/zh/terms.html"
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://metaprompt.deepsseek.diy/zh/terms"
+  },
+  "headline": "服务条款 - MetaMind Hub",
+  "description": "阅读 MetaMind Hub 的服务条款。了解您在使用我们平台时的权利和责任。",
+  "image": "https://metaprompt.deepsseek.diy/img/logo.svg",
+  "author": {
+    "@type": "Organization",
+    "name": "MetaMind Hub"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MetaMind Hub",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://metaprompt.deepsseek.diy/img/logo.svg"
+    }
+  },
+  "datePublished": "2025-05-11",
+  "dateModified": "2025-05-11",
+  "inLanguage": "zh"
 }

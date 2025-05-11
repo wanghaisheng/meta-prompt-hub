@@ -1,8 +1,26 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "隐私政策页",
-  "author": {"@type": "Organization", "name": "HeyManifestation"},
-  "datePublished": "2024-01-01",
-  "mainEntityOfPage": "https://visionboard.heymanifestation.com/zh/privacy.html"
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://metaprompt.deepsseek.diy/zh/privacy"
+  },
+  "headline": "隐私政策 - MetaMind Hub",
+  "description": "阅读 MetaMind Hub 的隐私政策。了解我们如何收集、使用和保护您的数据。",
+  "image": "https://metaprompt.deepsseek.diy/img/logo.svg",
+  "author": {
+    "@type": "Organization",
+    "name": "MetaMind Hub"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MetaMind Hub",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://metaprompt.deepsseek.diy/img/logo.svg"
+    }
+  },
+  "datePublished": "2025-05-11",
+  "dateModified": "2025-05-11",
+  "inLanguage": "zh"
 }

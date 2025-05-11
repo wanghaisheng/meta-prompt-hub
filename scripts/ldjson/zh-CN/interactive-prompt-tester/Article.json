@@ -3,10 +3,10 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://metaprompt.deepsseek.diy/terms"
+    "@id": "https://metaprompt.deepsseek.diy/zh/interactive-prompt-tester"
   },
-  "headline": "Terms of Service - MetaMind Hub",
-  "description": "Read the Terms of Service for MetaMind Hub. Understand your rights and responsibilities when using our platform.",
+  "headline": "交互式提示词测试器 - MetaMind Hub",
+  "description": "使用 MetaMind Hub 的交互式提示词测试器实时测试和优化您的 AI 提示词。",
   "image": "https://metaprompt.deepsseek.diy/img/logo.svg",
   "author": {
     "@type": "Organization",
@@ -22,5 +22,5 @@
   },
   "datePublished": "2025-05-11",
   "dateModified": "2025-05-11",
-  "inLanguage": "en"
+  "inLanguage": "zh"
 }

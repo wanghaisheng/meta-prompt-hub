@@ -1,8 +1,26 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Privacy Policy Page",
-  "author": {"@type": "Organization", "name": "HeyManifestation"},
-  "datePublished": "2024-01-01",
-  "mainEntityOfPage": "https://visionboard.heymanifestation.com/privacy.html"
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://metaprompt.deepsseek.diy/privacy"
+  },
+  "headline": "Privacy Policy - MetaMind Hub",
+  "description": "Read the Privacy Policy for MetaMind Hub. Understand how we collect, use, and protect your data.",
+  "image": "https://metaprompt.deepsseek.diy/img/logo.svg",
+  "author": {
+    "@type": "Organization",
+    "name": "MetaMind Hub"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MetaMind Hub",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://metaprompt.deepsseek.diy/img/logo.svg"
+    }
+  },
+  "datePublished": "2025-05-11",
+  "dateModified": "2025-05-11",
+  "inLanguage": "en"
 }

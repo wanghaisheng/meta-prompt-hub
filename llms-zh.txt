@@ -1,72 +1,56 @@
-# WebSim Vibe Coding Starter - 网站完整介绍
-> WebSim Vibe Coding Starter：5分钟构建一个现代化的、SEO优化的网站。AI赋能、极致自动化、响应式、SEO最佳实践、极具创意与未来感的SaaS工具。
+# MetaMind Hub - 网站完整介绍
+> MetaMind Hub：创建、测试、管理和优化 AI 模型元提示词的终极平台。提升您的提示工程技能。
 
 ## 网站背景
-WebSim Vibe Coding Starter 专为创业者、产品经理和编程经验有限的创新者打造。无需代码基础，5分钟内即可验证你的商业想法，快速上线专业网站。内置 SaaS 工具、游戏类 App 落地页与原型设计提示词模板、SEO 优化 prompt 及常用自动化脚本，助你高效实现从创意到落地。
+MetaMind Hub 专为开发者、研究人员和 AI 从业者打造，旨在帮助他们掌握元提示词。它提供工具和一个协作环境，用于创建、测试、管理、优化和共享高质量的元提示词。其核心吸引力在于揭开元提示词的神秘面纱，加速 LLM 应用的开发，并通过结构化、AI 辅助和社区驱动的方法提高 AI 性能。
 
 ## 主要网址说明（根据 sitemap.xml）
-- https://websimstarter.borninsea.com/
-  - WebSim Vibe Coding Starter 的主登陆页面。
-- https://websimstarter.borninsea.com/#features
-  - 详细介绍该入门套件功能的区域。
-- https://websimstarter.borninsea.com/#playground
-  - 体验工作流程的互动实验区。
-- https://websimstarter.borninsea.com/#showcase
-  - 使用 WebSim Vibe 构建的项目展示。
-- https://websimstarter.borninsea.com/#future
-  - 未来发展和优势展望。
-- https://websimstarter.borninsea.com/about.html
-  - 关于团队和项目的信息。
-- https://websimstarter.borninsea.com/career.html
-  - 工作机会。
-- https://websimstarter.borninsea.com/privacy.html
+- https://metaprompt.deepsseek.diy/
+  - MetaMind Hub 的主登陆页面。
+- https://metaprompt.deepsseek.diy/interactive-prompt-tester
+  - 用于测试提示词的交互式工具。
+- https://metaprompt.deepsseek.diy/app/community
+  - 用于分享和协作的社区中心。
+- https://metaprompt.deepsseek.diy/app/dashboard
+  - 用户仪表盘，用于管理提示词和项目。
+- https://metaprompt.deepsseek.diy/app/editor
+  - 用于创建和优化元提示词的高级编辑器。
+- https://metaprompt.deepsseek.diy/app/evaluation
+  - 用于评估提示词性能的平台。
+- https://metaprompt.deepsseek.diy/privacy
   - 详细说明应用程序的隐私政策。
-- https://websimstarter.borninsea.com/terms.html
+- https://metaprompt.deepsseek.diy/terms
   - 概述服务条款。
 
 ## 内容分类详情
-### [首页](https://websimstarter.borninsea.com/)
-介绍 WebSim Vibe Coding Starter、其宗旨和核心价值主张。强调无代码开发和快速部署等主要优势。
+### [首页](https://metaprompt.deepsseek.diy/)
+介绍 MetaMind Hub、其宗旨和核心价值主张。强调高级提示工程工具和协作环境等主要优势。
 
-### [功能特性](https://websimstarter.borninsea.com/#features)
+### [功能特性]
 列出主要功能，包括：
-- 🪄 无需编程，自动生成全站
-- 🚀 5分钟快速验证产品概念
-- 💡 创业者/产品经理友好
-- 📝 SaaS/游戏App落地页与原型设计 Prompt 模板
-- 🔍 SEO 优化专用 Prompt 模板
-- ⚙️ 常用自动化脚本（生成、部署、SEO 提交）
-- 🌍 多语言支持 & 自动生成站点地图
-- 🔍 自动化SEO：IndexNow, Bing, Google,元数据,验证
-- 🤖 AI驱动的博客 & 图片生成
-- 📱 PWA & 移动优先，速度极快
-- 🔑 关键词研究，分析，清晰度
-- 👤 真实用户管理 (Cloudflare Workers)
-- 🤖 AI Scraper 友好的 robots.txt & llms.txt 自动生成
+- 元提示词创建和编辑工具
+- 交互式提示词测试和调试
+- 提示词版本控制和管理
+- AI 辅助的提示词优化
+- 用于共享提示词的社区平台
+- 性能评估和分析
+- 多语言支持
+- 安全且可扩展的基础设施
 
-### [互动实验区](https://websimstarter.borninsea.com/#playground)
-一个四步引导体验：
-1.  **Grok调研**：研究用户抱怨和痛点。
-2.  **用 Google AI Studio 生成 PRD.md**：创建产品需求文档。
-3.  **用 WebSim 生成网站**：使用 PRD 和提示生成网站。
-4.  **部署上线**：将网站部署到 Cloudflare 或静态主机。
+### [交互式提示词测试器](https://metaprompt.deepsseek.diy/interactive-prompt-tester)
+一个专门的空间，用于实时试验提示词，获取反馈，并针对各种 AI 模型优化它们以获得最佳性能。
 
-### [案例展示](https://websimstarter.borninsea.com/#showcase)
-展示使用 WebSim Vibe Coding Starter 构建的网站和应用程序示例，例如 AI SaaS 登陆页面和多语言博客。
+### [社区中心](https://metaprompt.deepsseek.diy/app/community)
+一个协作空间，供用户分享提示词、讨论最佳实践并相互学习。功能包括论坛、提示词库和用户个人资料。
 
-### [未来展望](https://websimstarter.borninsea.com/#future)
-概述未来优势和项目愿景，包括：
-- 持续的 AI 集成：更智能、更具创意的网站生成
-- SEO 自动化：始终与最新算法保持同步
-- 大胆、创意的 UI/UX：GSAP 驱动的微交互和动画
-- 从 MVP 到企业级的可扩展性
+### [用户仪表盘](https://metaprompt.deepsseek.diy/app/dashboard)
+用户的个性化空间，用于管理其保存的提示词、跟踪其活动并访问平台功能。
 
 ## 用户价值
-- 无需编码即可快速验证商业想法。
-- 提供一个全面的工具包，用于快速构建和启动专业网站。
-- 自动化 SEO、多语言支持和其他复杂任务。
-- 提供模板和 AI 驱动的工具以简化开发。
-- 默认关注性能、可访问性和移动响应性。
+- 赋能用户创建高效的 AI 提示词。
+- 简化提示工程工作流程。
+- 促进 AI 社区内的协作和知识共享。
+- 帮助提高 AI 应用程序的性能和可靠性。
 
 ## 技术 SEO 优化
 - 动态注入 SEO 元标签、备用语言链接和 LD+JSON 结构化数据，以实现最佳搜索引擎可见性和多语言支持。

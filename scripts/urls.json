@@ -1,9 +1,25 @@
 {
   "defaultLang": "en",
-  "langs": [],
+  "langs": [
+    "en",
+    "zh"
+  ],
   "urls": [
+    "/app/community",
+    "/app/dashboard",
+    "/app/editor",
+    "/app/evaluation",
+    "/interactive-prompt-tester",
     "/privacy",
     "/terms",
-    "/"
+    "/zh/app/community",
+    "/zh/app/dashboard",
+    "/zh/app/editor",
+    "/zh/app/evaluation",
+    "/zh/interactive-prompt-tester",
+    "/zh/privacy",
+    "/zh/terms",
+    "/",
+    "/zh"
   ]
 }

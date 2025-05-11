@@ -1,7 +1,7 @@
 {
-  "baseUrl": "https://websimstarter.borninsea.com",
+  "baseUrl": "https://metaprompt.deepsseek.diy",
   "defaultLang": "en",
-  "email":"support@borninsea.com",
+  "email":"support@metaprompt.deepsseek.diy",
   "apptype":"app",
   "localepath":"locale",
   "robots": {

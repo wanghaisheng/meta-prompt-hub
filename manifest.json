@@ -1,7 +1,7 @@
 {
-  "name": "WebSim Vibe Coding Starter",
-  "short_name": "WebSimVibe",
-  "description": "WebSim Vibe Coding Starter: Build modern, SEO-optimized websites in 5 minutes. AI-powered, no-code, multi-language.",
+  "name": "MetaMind  | Master the Art of AI Prompt",
+  "short_name": "MetaMind",
+  "description": "Master the art of AI prompting with MetaMind Hub. Create, test, optimize, and share high-performance meta prompts. Maximize your LLM's potential with advanced prompt engineering tools.",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",

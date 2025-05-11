@@ -1,12 +1,28 @@
 {
   "defaultLang": "en",
   "langs": [
-    ""
+    "",
+    "en",
+    "zh"
   ],
   "urls": [
-    "https://websimstarter.borninsea.com/privacy",
-    "https://websimstarter.borninsea.com/terms",
-    "https://websimstarter.borninsea.com/",
-    "https://websimstarter.borninsea.com/index.html"
+    "https://metaprompt.deepsseek.diy/app/community",
+    "https://metaprompt.deepsseek.diy/app/dashboard",
+    "https://metaprompt.deepsseek.diy/app/editor",
+    "https://metaprompt.deepsseek.diy/app/evaluation",
+    "https://metaprompt.deepsseek.diy/interactive-prompt-tester",
+    "https://metaprompt.deepsseek.diy/privacy",
+    "https://metaprompt.deepsseek.diy/terms",
+    "https://metaprompt.deepsseek.diy/zh/app/community",
+    "https://metaprompt.deepsseek.diy/zh/app/dashboard",
+    "https://metaprompt.deepsseek.diy/zh/app/editor",
+    "https://metaprompt.deepsseek.diy/zh/app/evaluation",
+    "https://metaprompt.deepsseek.diy/zh/interactive-prompt-tester",
+    "https://metaprompt.deepsseek.diy/zh/privacy",
+    "https://metaprompt.deepsseek.diy/zh/terms",
+    "https://metaprompt.deepsseek.diy/",
+    "https://metaprompt.deepsseek.diy/zh",
+    "https://metaprompt.deepsseek.diy/index.html",
+    "https://metaprompt.deepsseek.diy/zh/index.html"
   ]
 }

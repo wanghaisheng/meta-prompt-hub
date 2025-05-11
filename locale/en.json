@@ -1,0 +1,149 @@
+{
+  "nav_features": "Features",
+  "nav_how_it_works": "How It Works",
+  "nav_pricing": "Pricing",
+  "nav_faq": "FAQ",
+  "nav_login": "Login",
+  "nav_signup": "Sign Up Free",
+  
+  "hero_title": "Unlock the Power of AI with Meta Prompts",
+  "hero_subtitle": "MetaMind Hub is your all-in-one platform for creating, testing, optimizing, and sharing high-performance meta prompts. Maximize your LLM's potential with advanced prompt engineering tools.",
+  "hero_cta_primary": "Start Creating for Free",
+  "hero_cta_secondary": "Watch Demo",
+  
+  "stat_engineers": "Prompt Engineers",
+  "stat_prompts": "Prompts Created",
+  "stat_performance": "Avg. Performance Boost",
+  
+  "problem_title": "The Challenge with AI Prompting Today",
+  "problem_subtitle": "As LLMs become more powerful, prompt engineering grows more complex and critical",
+  
+  "problem_1_title": "Trial and Error Approach",
+  "problem_1_desc": "Hours wasted with manual, unstructured experimentation and inconsistent results.",
+  
+  "problem_2_title": "No Version Control",
+  "problem_2_desc": "Prompts stored in scattered documents with no history tracking or easy comparison.",
+  
+  "problem_3_title": "Poor Performance Metrics",
+  "problem_3_desc": "Lack of objective ways to measure and compare prompt effectiveness.",
+  
+  "problem_4_title": "Siloed Knowledge",
+  "problem_4_desc": "Teams reinvent prompts without shared repositories or collaborative tools.",
+  
+  "features_title": "A Complete Meta Prompt Engineering Solution",
+  "features_subtitle": "Everything you need to master prompt engineering in one integrated platform",
+  
+  "feature_1_title": "Intelligent Meta Prompt Editor",
+  "feature_1_desc": "AI-assisted prompt creation with syntax highlighting, template library, and real-time suggestions to enhance your prompt quality.",
+  
+  "feature_2_title": "Prompt Library & Version Control",
+  "feature_2_desc": "Git-like versioning for your prompts with branching, history tracking, and easy rollback capabilities.",
+  
+  "feature_3_title": "Automated Testing & Evaluation",
+  "feature_3_desc": "Rigorously test prompt performance with customizable metrics and A/B testing frameworks to identify winners.",
+  
+  "feature_4_title": "Community Hub & Knowledge Base",
+  "feature_4_desc": "Discover high-quality prompts, share your creations, and learn from the collective expertise of our growing community.",
+  
+  "feature_5_title": "Team Collaboration Tools",
+  "feature_5_desc": "Work together seamlessly with shared prompt libraries, commenting, and role-based access control for enterprise teams.",
+  
+  "feature_6_title": "Multi-Model Compatibility",
+  "feature_6_desc": "Test and optimize prompts across different LLMs including GPT-4, Claude, and other popular models.",
+  
+  "how_it_works_title": "How MetaMind Hub Works",
+  "how_it_works_subtitle": "A streamlined workflow for prompt engineering excellence",
+  
+  "step_1_title": "Create & Import",
+  "step_1_desc": "Start from scratch with AI assistance, use templates, or import existing prompts.",
+  
+  "step_2_title": "Test & Evaluate",
+  "step_2_desc": "Run your prompts against real data and analyze performance with objective metrics.",
+  
+  "step_3_title": "Optimize & Iterate",
+  "step_3_desc": "Refine your prompts based on AI suggestions and performance data.",
+  
+  "step_4_title": "Share & Deploy",
+  "step_4_desc": "Store in your library, share with your team, or contribute to the community.",
+  
+  "demo_title": "See MetaMind Hub in Action",
+  "demo_subtitle": "Watch how our platform transforms prompt engineering",
+  
+  "screenshots_title": "App Experience Preview",
+  "screenshots_subtitle": "Experience our intuitive and powerful interface",
+  
+  "screenshot_1_title": "Central Dashboard",
+  "screenshot_1_desc": "Your personal command center for all prompt engineering activities",
+  
+  "screenshot_2_title": "Intelligent Editor",
+  "screenshot_2_desc": "Powerful tools for crafting the perfect meta prompt",
+  
+  "screenshot_3_title": "Evaluation Center",
+  "screenshot_3_desc": "Data-driven testing and optimization for your prompts",
+  
+  "screenshot_4_title": "Community Hub",
+  "screenshot_4_desc": "Discover and share top-performing prompts",
+  
+  "open_app_demo": "Open Full App Demo",
+  
+  "testimonials_title": "Trusted by Prompt Engineers Worldwide",
+  "testimonials_subtitle": "Join thousands of professionals who've transformed their AI workflow",
+  
+  "testimonials_companies": "Used by teams at",
+  
+  "pricing_title": "Simple, Transparent Pricing",
+  "pricing_subtitle": "Choose the plan that fits your prompt engineering needs",
+  
+  "pricing_monthly": "Monthly",
+  "pricing_annual": "Annual",
+  "pricing_save": "Save 20%",
+  
+  "plan_1_title": "Solo Developer",
+  "plan_1_price_monthly": "$0",
+  "plan_1_price_annual": "$0",
+  "plan_1_period": "Free forever",
+  "plan_1_cta": "Get Started",
+  
+  "plan_2_title": "Professional",
+  "plan_2_price_monthly": "$29",
+  "plan_2_price_annual": "$23",
+  "plan_2_period": "per user/month",
+  "plan_2_cta": "Start 14-day Free Trial",
+  "plan_2_badge": "Most Popular",
+  
+  "plan_3_title": "Enterprise",
+  "plan_3_price": "Custom",
+  "plan_3_period": "tailored to your needs",
+  "plan_3_cta": "Contact Sales",
+  
+  "compare_plans": "Compare all plan features",
+  
+  "cta_title": "Ready to Master Meta Prompts?",
+  "cta_subtitle": "Join thousands of engineers and researchers who've already transformed their AI workflows.",
+  "cta_primary": "Start for Free",
+  "cta_secondary": "Schedule a Demo",
+  
+  "cta_benefit_1": "No credit card required",
+  "cta_benefit_2": "Free tier forever",
+  "cta_benefit_3": "Cancel anytime",
+  
+  "faq_title": "Frequently Asked Questions",
+  "faq_subtitle": "Everything you need to know about MetaMind Hub",
+  
+  "more_questions": "Still have questions?",
+  "contact_support": "Contact our support team",
+  
+  "footer_tagline": "Elevate your AI interactions with advanced meta prompt engineering tools",
+  
+  "footer_product": "Product",
+  "footer_resources": "Resources",
+  "footer_company": "Company",
+  "footer_legal": "Legal",
+  
+  "newsletter_title": "Stay Updated on Prompt Engineering",
+  "newsletter_subtitle": "Subscribe to our newsletter for the latest tips, trends, and updates.",
+  "newsletter_cta": "Subscribe",
+  "newsletter_disclaimer": "We respect your privacy. Unsubscribe at any time.",
+  "newsletter_success": "Thanks for subscribing!"
+}
+

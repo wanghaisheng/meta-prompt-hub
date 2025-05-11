@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Prompt Tester | MetaMind Hub</title>
+    <link rel="stylesheet" href="../css/app-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .tester-container {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - var(--header-height) - var(--ios-status-height) - var(--nav-height));
+            padding: var(--spacing-md);
+            gap: var(--spacing-md);
+        }
+        
+        .panel-container {
+            display: flex;
+            flex: 1;
+            gap: var(--spacing-md);
+        }
+        
+        .editor-panel, .preview-panel {
+            flex: 1;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .panel-header {
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--neutral-100);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .panel-content {
+            flex: 1;
+            padding: var(--spacing-md);
+            overflow-y: auto;
+        }
+        
+        .variables-section {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .variables-list {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+        
+        .variable-item {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .prompt-editor {
+            width: 100%;
+            height: 100%;
+            font-family: var(--font-mono);
+            font-size: 14px;
+            border: none;
+            resize: none;
+            background: var(--neutral-50);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+        }
+        
+        .prompt-editor:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .preview-content {
+            background: var(--neutral-50);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            font-family: var(--font-primary);
+            min-height: 150px;
+        }
+        
+        .feedback-container {
+            margin-top: var(--spacing-md);
+            border-top: 1px solid var(--neutral-100);
+            padding-top: var(--spacing-md);
+        }
+        
+        .feedback-item {
+            display: flex;
+            margin-bottom: var(--spacing-sm);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-md);
+            background: var(--neutral-50);
+        }
+        
+        .feedback-icon {
+            color: var(--primary-color);
+            margin-right: var(--spacing-sm);
+        }
+        
+        .score-container {
+            display: flex;
+            align-items: center;
+            margin-top: var(--spacing-md);
+        }
+        
+        .score-label {
+            font-weight: 500;
+            margin-right: var(--spacing-sm);
+        }
+        
+        .score-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .score-meter {
+            flex: 1;
+            height: 8px;
+            background: var(--neutral-200);
+            border-radius: var(--radius-full);
+            margin: 0 var(--spacing-md);
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: var(--primary-color);
+            border-radius: var(--radius-full);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+        
+        .btn-run {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            padding: var(--spacing-sm) var(--spacing-md);
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .btn-run:hover {
+            background: var(--primary-dark);
+        }
+        
+        .btn-save {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            padding: var(--spacing-sm) var(--spacing-md);
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .btn-save:hover {
+            background: var(--secondary-dark);
+        }
+    </style>
+</head>
+<body>
+    <!-- iOS Status Bar -->
+    <div class="ios-status-bar">
+        <div class="status-left">9:41</div>
+        <div class="status-center">
+            <div class="notch"></div>
+        </div>
+        <div class="status-right">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <h1>Interactive Prompt Tester</h1>
+            <div class="header-actions">
+                <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="tester-container">
+        <!-- Variables Section -->
+        <div class="variables-section">
+            <h3>Test Variables</h3>
+            <div class="variables-list">
+                <div class="variable-item">
+                    <div class="input-group">
+                        <label for="var-input-text">Input Text</label>
+                        <textarea id="var-input-text" placeholder="Enter sample text to summarize...">The recent advancements in artificial intelligence and machine learning have revolutionized the way we approach complex problems in various domains. From healthcare to finance, transportation to entertainment, AI systems are being deployed to automate processes, generate insights, and create new experiences that were previously impossible. This rapid evolution has prompted discussions about the ethical implications of AI, including concerns about bias, transparency, accountability, and the potential impact on the workforce.</textarea>
+                    </div>
+                </div>
+                <div class="variable-item">
+                    <div class="input-group">
+                        <label for="var-summary-length">Summary Length</label>
+                        <select id="var-summary-length">
+                            <option value="25%">25% of original</option>
+                            <option value="33%" selected>33% of original</option>
+                            <option value="50%">50% of original</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="variable-item">
+                    <div class="input-group">
+                        <label for="var-style">Style</label>
+                        <select id="var-style">
+                            <option value="concise" selected>Concise</option>
+                            <option value="academic">Academic</option>
+                            <option value="casual">Casual</option>
+                            <option value="creative">Creative</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Split Panels -->
+        <div class="panel-container">
+            <!-- Editor Panel -->
+            <div class="editor-panel">
+                <div class="panel-header">
+                    <h3>Meta Prompt Editor</h3>
+                    <div class="action-buttons">
+                        <button class="btn-run" id="run-prompt">
+                            <i class="fas fa-play"></i>
+                            <span>Run Test</span>
+                        </button>
+                        <button class="btn-save">
+                            <i class="fas fa-save"></i>
+                            <span>Save</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <textarea class="prompt-editor" id="prompt-editor">System: You are an expert text summarizer. Your task is to summarize text in a clear, concise manner while retaining all key information. Prioritize main points and important details.
+
+Instructions: 
+1. Read and understand the input text completely.
+2. Identify the main topic and key supporting points.
+3. Remove redundant information and examples unless they are essential.
+4. Maintain the original tone and intent of the text.
+5. Create a summary that is approximately {summary_length} of the original length.
+6. If the text contains technical terms, preserve them with brief explanations if necessary.
+7. Use {style} style for the summary.
+
+Input: {input_text}
+
+Output format:
+Title: [Create a concise, descriptive title for the text]
+Summary: [Your summary here]
+Key Points:
+- [Key point 1]
+- [Key point 2]
+- [Key point 3]</textarea>
+                </div>
+            </div>
+            
+            <!-- Preview Panel -->
+            <div class="preview-panel">
+                <div class="panel-header">
+                    <h3>Live Preview</h3>
+                    <span id="processing-status">Ready</span>
+                </div>
+                <div class="panel-content">
+                    <div class="preview-content" id="preview-content">
+                        <p class="placeholder-text">Run your prompt to see the LLM output here...</p>
+                    </div>
+                    
+                    <div class="feedback-container">
+                        <h4>AI Analysis & Suggestions</h4>
+                        <div class="feedback-item">
+                            <div class="feedback-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div class="feedback-text">Your prompt structure is clear and well-organized with distinct sections.</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="feedback-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div class="feedback-text">Consider adding examples of good summaries to help guide the model.</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="feedback-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div class="feedback-text">You could strengthen instructions about preserving the author's intended meaning.</div>
+                        </div>
+                        
+                        <div class="score-container">
+                            <div class="score-label">Prompt Quality Score:</div>
+                            <div class="score-meter">
+                                <div class="score-fill" style="width: 78%;"></div>
+                            </div>
+                            <div class="score-value">78/100</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- App Navigation -->
+    <nav class="app-nav">
+        <a href="dashboard.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="library.html" class="nav-item">
+            <i class="fas fa-folder"></i>
+            <span>Library</span>
+        </a>
+        <a href="editor.html" class="nav-item active">
+            <i class="fas fa-code"></i>
+            <span>Editor</span>
+        </a>
+        <a href="evaluation.html" class="nav-item">
+            <i class="fas fa-flask"></i>
+            <span>Evaluate</span>
+        </a>
+        <a href="community.html" class="nav-item">
+            <i class="fas fa-users"></i>
+            <span>Community</span>
+        </a>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const runPromptBtn = document.getElementById('run-prompt');
+            const promptEditor = document.getElementById('prompt-editor');
+            const previewContent = document.getElementById('preview-content');
+            const processingStatus = document.getElementById('processing-status');
+            const inputTextArea = document.getElementById('var-input-text');
+            const summaryLengthSelect = document.getElementById('var-summary-length');
+            const styleSelect = document.getElementById('var-style');
+            
+            // Simulate running the prompt test
+            runPromptBtn.addEventListener('click', function() {
+                // Get variables
+                const inputText = inputTextArea.value;
+                const summaryLength = summaryLengthSelect.value;
+                const style = styleSelect.value;
+                
+                // Update status
+                processingStatus.textContent = 'Processing...';
+                
+                // Simulate API call delay
+                setTimeout(() => {
+                    // Replace variables in the prompt
+                    let processedPrompt = promptEditor.value
+                        .replace('{input_text}', inputText)
+                        .replace('{summary_length}', summaryLength)
+                        .replace('{style}', style);
+                    
+                    // Generate simulated response
+                    let response = simulateLLMResponse(inputText, style);
+                    
+                    // Update preview
+                    previewContent.innerHTML = formatResponse(response);
+                    
+                    // Update status
+                    processingStatus.textContent = 'Completed';
+                    
+                    // Update feedback based on prompt content
+                    updateFeedback(promptEditor.value);
+                }, 1500);
+            });
+            
+            // Simulate LLM response generation
+            function simulateLLMResponse(inputText, style) {
+                // This is a simplified simulation
+                const titlePrefix = style === 'academic' ? 'An Analysis of ' : 
+                                   style === 'casual' ? 'The Scoop on ' :
+                                   style === 'creative' ? 'Exploring the Universe of ' : '';
+                
+                return {
+                    title: titlePrefix + "AI Advancements: Revolution and Ethics",
+                    summary: "AI and machine learning advances have transformed problem-solving across healthcare, finance, transportation, and entertainment by automating processes and generating new insights. This rapid evolution has sparked ethical discussions regarding bias, transparency, accountability, and workforce impact.",
+                    keyPoints: [
+                        "AI is revolutionizing multiple domains",
+                        "Benefits include automation and new capabilities",
+                        "Ethical concerns include bias and workforce impacts"
+                    ]
+                };
+            }
+            
+            // Format the response for display
+            function formatResponse(response) {
+                return `
+                    <h3>${response.title}</h3>
+                    <p><strong>Summary:</strong> ${response.summary}</p>
+                    <p><strong>Key Points:</strong></p>
+                    <ul>
+                        ${response.keyPoints.map(point => `<li>${point}</li>`).join('')}
+                    </ul>
+                `;
+            }
+            
+            // Update feedback based on prompt analysis
+            function updateFeedback(promptText) {
+                // This would typically involve AI analysis
+                // For demo, we're using static feedback
+                const feedbackContainer = document.querySelector('.feedback-container');
+                const scoreFill = document.querySelector('.score-fill');
+                
+                // Update score based on prompt length and complexity
+                const score = 65 + (promptText.length > 300 ? 13 : 0);
+                document.querySelector('.score-value').textContent = `${score}/100`;
+                scoreFill.style.width = `${score}%`;
+                
+                // Dynamic feedback could be generated here
+            }
+        });
+    </script>
+</body>
+</html>

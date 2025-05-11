@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Editor | MetaMind Hub</title>
+    <link rel="stylesheet" href="../css/app-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+</head>
+<body>
+    <!-- iOS Status Bar -->
+    <div class="ios-status-bar">
+        <div class="status-left">9:41</div>
+        <div class="status-center">
+            <div class="notch"></div>
+        </div>
+        <div class="status-right">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <h1>Editor</h1>
+            <div class="header-actions">
+                <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Editor Tabs -->
+    <div class="editor-tabs">
+        <button class="tab-btn active">Editor</button>
+        <button class="tab-btn">Test</button>
+        <button class="tab-btn">History</button>
+        <a href="interactive-prompt-tester.html" class="tab-btn" style="color: var(--primary-color);">
+            <i class="fas fa-bolt"></i> Interactive Tester
+        </a>
+    </div>
+
+    <!-- Editor Content -->
+    <main class="editor-content">
+        <!-- Top Configuration Panel -->
+        <div class="config-panel">
+            <div class="input-group">
+                <label for="prompt-name">Prompt Name</label>
+                <input type="text" id="prompt-name" value="Advanced Text Summarizer" placeholder="Enter prompt name">
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="prompt-version">Version</label>
+                    <input type="text" id="prompt-version" value="v1.2" placeholder="e.g., v1.0">
+                </div>
+                <div class="input-group">
+                    <label for="target-model">Target Model</label>
+                    <select id="target-model">
+                        <option>GPT-4</option>
+                        <option>GPT-3.5</option>
+                        <option>Claude 3</option>
+                        <option>LLaMA 2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="task-type">Task Type</label>
+                <select id="task-type">
+                    <option>Text Summarization</option>
+                    <option>Code Generation</option>
+                    <option>Data Analysis</option>
+                    <option>Creative Writing</option>
+                    <option>Question Answering</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="template">Template</label>
+                <select id="template">
+                    <option>None</option>
+                    <option>Chain of Thought</option>
+                    <option>Self Critique</option>
+                    <option>Few-shot Learning</option>
+                    <option>Role-based</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Editor Area -->
+        <div class="editor-area">
+            <div class="editor-toolbar">
+                <button class="toolbar-btn"><i class="fas fa-bold"></i></button>
+                <button class="toolbar-btn"><i class="fas fa-italic"></i></button>
+                <button class="toolbar-btn"><i class="fas fa-code"></i></button>
+                <button class="toolbar-btn"><i class="fas fa-list"></i></button>
+                <button class="toolbar-btn"><i class="fas fa-link"></i></button>
+                <span class="toolbar-separator"></span>
+                <button class="toolbar-btn"><i class="fas fa-plus-circle"></i> Variable</button>
+                <button class="toolbar-btn"><i class="fas fa-file-import"></i> Example</button>
+            </div>
+            <div class="code-editor">
+                <pre class="code-content"><span class="keyword">System:</span> You are an expert text summarizer. Your task is to summarize text in a clear, concise manner while retaining all key information. Prioritize main points and important details.
+
+<span class="keyword">Instructions:</span> 
+1. Read and understand the input text completely.
+2. Identify the main topic and key supporting points.
+3. Remove redundant information and examples unless they are essential.
+4. Maintain the original tone and intent of the text.
+5. Create a summary that is approximately <span class="variable">{summary_length}</span> of the original length.
+6. If the text contains technical terms, preserve them with brief explanations if necessary.
+7. Use <span class="variable">{style}</span> style for the summary.
+
+<span class="keyword">Input:</span> <span class="variable">{input_text}</span>
+
+<span class="keyword">Output format:</span>

@@ -1,0 +1,149 @@
+{
+  "nav_features": "功能特点",
+  "nav_how_it_works": "工作原理",
+  "nav_pricing": "定价",
+  "nav_faq": "常见问题",
+  "nav_login": "登录",
+  "nav_signup": "免费注册",
+  
+  "hero_title": "通过元提示词释放AI的力量",
+  "hero_subtitle": "MetaMind Hub是您的一站式平台，用于创建、测试、优化和共享高性能元提示词。通过先进的提示工程工具最大化您的LLM潜力。",
+  "hero_cta_primary": "免费开始创建",
+  "hero_cta_secondary": "观看演示",
+  
+  "stat_engineers": "提示工程师",
+  "stat_prompts": "已创建提示词",
+  "stat_performance": "平均性能提升",
+  
+  "problem_title": "当今AI提示面临的挑战",
+  "problem_subtitle": "随着LLMs变得更加强大，提示工程变得更加复杂和关键",
+  
+  "problem_1_title": "试错方法",
+  "problem_1_desc": "手动、无结构的实验浪费了大量时间，结果不一致。",
+  
+  "problem_2_title": "无版本控制",
+  "problem_2_desc": "提示词存储在分散的文档中，没有历史跟踪或易于比较的方法。",
+  
+  "problem_3_title": "性能指标不佳",
+  "problem_3_desc": "缺乏客观衡量和比较提示词有效性的方法。",
+  
+  "problem_4_title": "知识孤岛",
+  "problem_4_desc": "团队没有共享仓库或协作工具，重复发明提示词。",
+  
+  "features_title": "完整的元提示工程解决方案",
+  "features_subtitle": "一个集成平台提供掌握提示工程所需的一切",
+  
+  "feature_1_title": "智能元提示编辑器",
+  "feature_1_desc": "AI辅助的提示词创建，具有语法高亮、模板库和实时建议，提高您的提示质量。",
+  
+  "feature_2_title": "提示词库与版本控制",
+  "feature_2_desc": "提示词的Git式版本控制，具有分支、历史跟踪和轻松回滚功能。",
+  
+  "feature_3_title": "自动化测试与评估",
+  "feature_3_desc": "使用自定义指标和A/B测试框架严格测试提示词性能，识别最佳方案。",
+  
+  "feature_4_title": "社区中心与知识库",
+  "feature_4_desc": "发现高质量提示词，分享您的创作，从我们不断增长的社区中学习。",
+  
+  "feature_5_title": "团队协作工具",
+  "feature_5_desc": "通过共享提示词库、评论功能和企业团队的基于角色的访问控制无缝协作。",
+  
+  "feature_6_title": "多模型兼容性",
+  "feature_6_desc": "在不同的LLM模型上测试和优化提示词，包括GPT-4、Claude和其他流行模型。",
+  
+  "how_it_works_title": "MetaMind Hub的工作原理",
+  "how_it_works_subtitle": "提示工程卓越的流线型工作流程",
+  
+  "step_1_title": "创建与导入",
+  "step_1_desc": "在AI辅助下从头开始，使用模板，或导入现有提示词。",
+  
+  "step_2_title": "测试与评估",
+  "step_2_desc": "对实际数据运行您的提示词，并使用客观指标分析性能。",
+  
+  "step_3_title": "优化与迭代",
+  "step_3_desc": "根据AI建议和性能数据改进您的提示词。",
+  
+  "step_4_title": "共享与部署",
+  "step_4_desc": "存储在您的库中，与团队分享，或贡献给社区。",
+  
+  "demo_title": "体验MetaMind Hub实战",
+  "demo_subtitle": "观看我们的平台如何变革提示工程",
+  
+  "screenshots_title": "应用体验预览",
+  "screenshots_subtitle": "体验我们直观强大的界面",
+  
+  "screenshot_1_title": "中央仪表板",
+  "screenshot_1_desc": "您所有提示工程活动的个人指挥中心",
+  
+  "screenshot_2_title": "智能编辑器",
+  "screenshot_2_desc": "用于制作完美元提示词的强大工具",
+  
+  "screenshot_3_title": "评估中心",
+  "screenshot_3_desc": "数据驱动的提示词测试和优化",
+  
+  "screenshot_4_title": "社区中心",
+  "screenshot_4_desc": "发现和分享高性能提示词",
+  
+  "open_app_demo": "打开完整应用演示",
+  
+  "testimonials_title": "全球提示工程师的信赖之选",
+  "testimonials_subtitle": "加入数千名已经改变AI工作流程的专业人士",
+  
+  "testimonials_companies": "被以下团队使用",
+  
+  "pricing_title": "简单透明的定价",
+  "pricing_subtitle": "选择适合您提示工程需求的计划",
+  
+  "pricing_monthly": "月付",
+  "pricing_annual": "年付",
+  "pricing_save": "节省20%",
+  
+  "plan_1_title": "个人开发者",
+  "plan_1_price_monthly": "¥0",
+  "plan_1_price_annual": "¥0",
+  "plan_1_period": "永久免费",
+  "plan_1_cta": "开始使用",
+  
+  "plan_2_title": "专业版",
+  "plan_2_price_monthly": "¥199",
+  "plan_2_price_annual": "¥159",
+  "plan_2_period": "每用户/月",
+  "plan_2_cta": "开始14天免费试用",
+  "plan_2_badge": "最受欢迎",
+  
+  "plan_3_title": "企业版",
+  "plan_3_price": "定制",
+  "plan_3_period": "根据您的需求",
+  "plan_3_cta": "联系销售",
+  
+  "compare_plans": "比较所有计划功能",
+  
+  "cta_title": "准备掌握元提示词？",
+  "cta_subtitle": "加入数千名已经改变AI工作流程的工程师和研究人员。",
+  "cta_primary": "免费开始",
+  "cta_secondary": "预约演示",
+  
+  "cta_benefit_1": "无需信用卡",
+  "cta_benefit_2": "免费版永久使用",
+  "cta_benefit_3": "随时取消",
+  
+  "faq_title": "常见问题",
+  "faq_subtitle": "关于MetaMind Hub您需要了解的一切",
+  
+  "more_questions": "还有问题？",
+  "contact_support": "联系我们的支持团队",
+  
+  "footer_tagline": "通过先进的元提示工程工具提升您的AI交互",
+  
+  "footer_product": "产品",
+  "footer_resources": "资源",
+  "footer_company": "公司",
+  "footer_legal": "法律",
+  
+  "newsletter_title": "获取提示工程最新动态",
+  "newsletter_subtitle": "订阅我们的通讯，获取最新提示、趋势和更新。",
+  "newsletter_cta": "订阅",
+  "newsletter_disclaimer": "我们尊重您的隐私。可随时取消订阅。",
+  "newsletter_success": "感谢您的订阅！"
+}
+

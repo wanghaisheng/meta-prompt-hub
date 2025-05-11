@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Hub | MetaMind Hub</title>
+    <link rel="stylesheet" href="../css/app-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+</head>
+<body>
+    <!-- iOS Status Bar -->
+    <div class="ios-status-bar">
+        <div class="status-left">9:41</div>
+        <div class="status-center">
+            <div class="notch"></div>
+        </div>
+        <div class="status-right">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <h1>Community Hub</h1>
+            <div class="header-actions">
+                <button class="action-btn"><i class="fas fa-bell"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search & Filter Bar -->
+    <div class="search-filter-bar">
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search community prompts...">
+        </div>
+        <button class="filter-btn">
+            <i class="fas fa-sliders-h"></i>
+            <span>Filter</span>
+        </button>
+    </div>
+
+    <!-- Community Tabs -->
+    <div class="community-tabs">
+        <button class="tab-btn active">Discover</button>
+        <button class="tab-btn">Popular</button>
+        <button class="tab-btn">Recent</button>
+        <button class="tab-btn">Following</button>
+    </div>
+
+    <!-- Community Content -->
+    <main class="community-content">
+        <!-- Featured Prompt -->
+        <div class="featured-prompt">
+            <div class="featured-badge">
+                <i class="fas fa-star"></i>
+                <span>Featured</span>
+            </div>
+            <div class="prompt-header">
+                <div class="prompt-info">
+                    <h2 class="prompt-title">Python Code Generation Assistant</h2>
+                    <div class="prompt-meta">
+                        <div class="author-info">
+                            <img src="../img/community-user-1.jpg" alt="User avatar" class="author-avatar">
+                            <span class="author-name">AI_Wizard</span>
+                        </div>
+                        <div class="prompt-stats">
+                            <span class="stat"><i class="fas fa-thumbs-up"></i> 1.2k</span>
+                            <span class="stat"><i class="fas fa-comment"></i> 85</span>
+                            <span class="stat"><i class="fas fa-star"></i> 4.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prompt-tags">
+                <span class="tag">Code</span>
+                <span class="tag">Python</span>
+                <span class="tag">Development</span>
+            </div>
+            <div class="prompt-description">
+                <p>A comprehensive prompt engineered to generate high-quality Python code with proper error handling, docstrings, and test functions. Perfect for rapid prototyping and learning Python best practices.</p>
+            </div>
+            <div class="prompt-actions">
+                <button class="action-btn secondary">
+                    <i class="fas fa-eye"></i>
+                    <span>View Details</span>
+                </button>
+                <button class="action-btn primary">
+                    <i class="fas fa-download"></i>
+                    <span>Import to My Library</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Community Prompts Grid -->
+        <div class="community-grid">
+            <h3 class="section-title">Top Rated Prompts</h3>
+            <div class="prompts-grid">
+                <!-- Prompt Card 1 -->
+                <div class="prompt-card">
+                    <div class="card-header">
+                        <h4 class="card-title">Advanced SQL Query Generator</h4>
+                        <div class="card-meta">
+                            <div class="author-info small">
+                                <img src="../img/community-user-2.jpg" alt="User avatar" class="author-avatar small">
+                                <span class="author-name">DataGuru</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag small">SQL</span>
+                        <span class="tag small">Database</span>
+                    </div>
+                    <div class="card-stats">
+                        <span class="stat small"><i class="fas fa-thumbs-up"></i> 856</span>
+                        <span class="stat small"><i class="fas fa-comment"></i> 42</span>
+                        <span class="stat small"><i class="fas fa-star"></i> 4.3</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn small"><i class="fas fa-bookmark"></i></button>
+                        <button class="action-btn small"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+
+                <!-- Prompt Card 2 -->
+                <div class="prompt-card">
+                    <div class="card-header">
+                        <h4 class="card-title">Creative Writing Helper</h4>
+                        <div class="card-meta">
+                            <div class="author-info small">
+                                <img src="../img/community-user-3.jpg" alt="User avatar" class="author-avatar small">
+                                <span class="author-name">StoryWeaver</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag small">Writing</span>
+                        <span class="tag small">Creative</span>
+                    </div>
+                    <div class="card-stats">
+                        <span class="stat small"><i class="fas fa-thumbs-up"></i> 742</span>
+                        <span class="stat small"><i class="fas fa-comment"></i> 63</span>
+                        <span class="stat small"><i class="fas fa-star"></i> 4.7</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn small"><i class="fas fa-bookmark"></i></button>
+                        <button class="action-btn small"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+
+                <!-- Prompt Card 3 -->
+                <div class="prompt-card">
+                    <div class="card-header">
+                        <h4 class="card-title">Legal Document Analyzer</h4>
+                        <div class="card-meta">
+                            <div class="author-info small">
+                                <img src="../img/community-user-4.jpg" alt="User avatar" class="author-avatar small">
+                                <span class="author-name">LegalTech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag small">Legal</span>
+                        <span class="tag small">Analysis</span>
+                    </div>
+                    <div class="card-stats">
+                        <span class="stat small"><i class="fas fa-thumbs-up"></i> 521</span>
+                        <span class="stat small"><i class="fas fa-comment"></i> 29</span>
+                        <span class="stat small"><i class="fas fa-star"></i> 4.2</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn small"><i class="fas fa-bookmark"></i></button>
+                        <button class="action-btn small"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+
+                <!-- Prompt Card 4 -->
+                <div class="prompt-card">
+                    <div class="card-header">
+                        <h4 class="card-title">SEO Content Optimizer</h4>
+                        <div class="card-meta">
+                            <div class="author-info small">
+                                <img src="../img/community-user-5.jpg" alt="User avatar" class="author-avatar small">
+                                <span class="author-name">SEOMaster</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag small">SEO</span>
+                        <span class="tag small">Marketing</span>
+                    </div>
+                    <div class="card-stats">
+                        <span class="stat small"><i class="fas fa-thumbs-up"></i> 498</span>
+                        <span class="stat small"><i class="fas fa-comment"></i> 37</span>
+                        <span class="stat small"><i class="fas fa-star"></i> 4.4</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn small"><i class="fas fa-bookmark"></i></button>
+                        <button class="action-btn small"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <button class="view-more-btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Trending Tags -->
+        <div class="trending-tags">
+            <h3 class="section-title">Trending Tags</h3>
+            <div class="tags-cloud">
+                <span class="tag cloud-tag large">Python</span>
+                <span class="tag cloud-tag">Data Analysis</span>
+                <span class="tag cloud-tag medium">Creative Writing</span>
+                <span class="tag cloud-tag">Education</span>
+                <span class="tag cloud-tag large">ChatGPT</span>
+                <span class="tag cloud-tag medium">SQL</span>
+                <span class="tag cloud-tag">Business</span>
+                <span class="tag cloud-tag">Healthcare</span>
+                <span class="tag cloud-tag medium">Marketing</span>
+                <span class="tag cloud-tag">Legal</span>
+                <span class="tag cloud-tag">UX Design</span>
+                <span class="tag cloud-tag">JSON</span>
+            </div>
+        </div>
+
+        <!-- Top Contributors -->
+        <div class="top-contributors">
+            <h3 class="section-title">Top Contributors</h3>
+            <div class="contributors-list">
+                <div class="contributor-item">
+                    <div class="rank">1</div>
+                    <img src="../img/community-user-1.jpg" alt="Contributor" class="contributor-avatar">
+                    <div class="contributor-info">
+                        <h4 class="contributor-name">AI_Wizard</h4>
+                        <p class="contribution-count">78 prompts shared</p>
+                    </div>
+                    <button class="follow-btn">
+                        <i class="fas fa-user-plus"></i>
+                    </button>
+                </div>
+                <div class="contributor-item">
+                    <div class="rank">2</div>
+                    <img src="../img/community-user-2.jpg" alt="Contributor" class="contributor-avatar">
+                    <div class="contributor-info">
+                        <h4 class="contributor-name">DataGuru</h4>
+                        <p class="contribution-count">65 prompts shared</p>
+                    </div>
+                    <button class="follow-btn">
+                        <i class="fas fa-user-plus"></i>
+                    </button>
+                </div>
+                <div class="contributor-item">
+                    <div class="rank">3</div>
+                    <img src="../img/community-user-3.jpg" alt="Contributor" class="contributor-avatar">
+                    <div class="contributor-info">
+                        <h4 class="contributor-name">StoryWeaver</h4>
+                        <p class="contribution-count">51 prompts shared</p>
+                    </div>
+                    <button class="follow-btn following">
+                        <i class="fas fa-check"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="view-more">
+                <button class="view-more-btn">View All Contributors</button>
+            </div>
+        </div>
+
+        <!-- Community Discussions -->
+        <div class="community-discussions">
+            <h3 class="section-title">Recent Discussions</h3>
+            <div class="discussions-list">
+                <div class="discussion-item">
+                    <div class="discussion-info">
+                        <h4 class="discussion-title">Best practices for few-shot learning prompts?</h4>
+                        <div class="discussion-meta">
+                            <span class="meta-item">Started by <b>PromptGuru</b></span>
+                            <span class="meta-item"><i class="fas fa-comment"></i> 24 replies</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 2 hours ago</span>
+                        </div>
+                    </div>
+                    <button class="action-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="discussion-item">
+                    <div class="discussion-info">
+                        <h4 class="discussion-title">How to reduce hallucinations in factual prompts</h4>
+                        <div class="discussion-meta">
+                            <span class="meta-item">Started by <b>TruthSeeker</b></span>
+                            <span class="meta-item"><i class="fas fa-comment"></i> 17 replies</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 5 hours ago</span>
+                        </div>
+                    </div>
+                    <button class="action-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="discussion-item">
+                    <div class="discussion-info">
+                        <h4 class="discussion-title">Share your prompt version control workflow</h4>
+                        <div class="discussion-meta">
+                            <span class="meta-item">Started by <b>VersionMaster</b></span>
+                            <span class="meta-item"><i class="fas fa-comment"></i> 9 replies</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> Yesterday</span>
+                        </div>
+                    </div>
+                    <button class="action-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="view-more">
+                <button class="view-more-btn">Go to Forums</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- App Navigation -->
+    <nav class="app-nav">
+        <a href="dashboard.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="library.html" class="nav-item">
+            <i class="fas fa-folder"></i>
+            <span>Library</span>
+        </a>
+        <a href="editor.html" class="nav-item">
+            <i class="fas fa-code"></i>
+            <span>Editor</span>
+        </a>
+        <a href="evaluation.html" class="nav-item">
+            <i class="fas fa-flask"></i>
+            <span>Evaluate</span>
+        </a>
+        <a href="community.html" class="nav-item active">
+            <i class="fas fa-users"></i>
+            <span>Community</span>
+        </a>
+    </nav>
+</body>
+</html>
+

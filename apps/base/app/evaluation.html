@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Center | MetaMind Hub</title>
+    <link rel="stylesheet" href="../css/app-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+</head>
+<body>
+    <!-- iOS Status Bar -->
+    <div class="ios-status-bar">
+        <div class="status-left">9:41</div>
+        <div class="status-center">
+            <div class="notch"></div>
+        </div>
+        <div class="status-right">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <h1>Evaluation Center</h1>
+            <div class="header-actions">
+                <button class="new-evaluation-btn">
+                    <i class="fas fa-plus"></i>
+                    New Evaluation
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Evaluation Tabs -->
+    <div class="evaluation-tabs">
+        <button class="tab-btn active">Results</button>
+        <button class="tab-btn">In Progress</button>
+        <button class="tab-btn">Datasets</button>
+    </div>
+
+    <!-- Evaluation Content -->
+    <main class="evaluation-content">
+        <!-- Active Evaluation Result -->
+        <div class="evaluation-result active-result">
+            <div class="result-header">
+                <div class="result-info">
+                    <h2 class="result-title">Summarization Prompt Comparison</h2>
+                    <div class="result-meta">
+                        <span class="meta-item"><i class="fas fa-calendar"></i> June 15, 2024</span>
+                        <span class="meta-item"><i class="fas fa-robot"></i> GPT-4</span>
+                        <span class="meta-item"><i class="fas fa-database"></i> 50 samples</span>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <button class="action-btn"><i class="fas fa-share"></i></button>
+                    <button class="action-btn"><i class="fas fa-download"></i></button>
+                    <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Prompt Version</th>
+                            <th>ROUGE-L</th>
+                            <th>Avg. Time</th>
+                            <th>Human Rating</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="winner-row">
+                            <td>
+                                <div class="version-name">
+                                    <span class="winner-badge"><i class="fas fa-trophy"></i></span>
+                                    <span>Text Summarizer v3</span>
+                                </div>
+                            </td>
+                            <td>0.45</td>
+                            <td>2.1s</td>
+                            <td>4.2/5</td>
+                            <td>
+                                <button class="action-btn small"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn small"><i class="fas fa-code"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Text Summarizer v2</td>
+                            <td>0.38</td>
+                            <td>1.8s</td>
+                            <td>3.6/5</td>
+                            <td>
+                                <button class="action-btn small"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn small"><i class="fas fa-code"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Text Summarizer v1</td>
+                            <td>0.32</td>
+                            <td>1.9s</td>
+                            <td>3.1/5</td>
+                            <td>
+                                <button class="action-btn small"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn small"><i class="fas fa-code"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Performance Charts -->
+            <div class="performance-charts">
+                <div class="chart-card">
+                    <h3 class="chart-title">ROUGE-L Score Comparison</h3>
+                    <div class="chart-placeholder">
+                        <!-- Bar chart placeholder -->
+                        <div class="chart-bars">
+                            <div class="chart-bar" style="height: 45%;" data-label="v1"></div>
+                            <div class="chart-bar" style="height: 65%;" data-label="v2"></div>
+                            <div class="chart-bar" style="height: 90%;" data-label="v3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3 class="chart-title">Human Evaluation Scores</h3>
+                    <div class="chart-placeholder">
+                        <!-- Radar chart placeholder -->
+                        <div class="chart-radar">
+                            <div class="radar-circle"></div>
+                            <div class="radar-circle"></div>
+                            <div class="radar-circle"></div>
+                            <div class="radar-point" style="top: 30%; left: 50%;"></div>
+                            <div class="radar-point" style="top: 50%; left: 70%;"></div>
+                            <div class="radar-point" style="top: 70%; left: 40%;"></div>
+                            <div class="radar-point" style="top: 40%; left: 30%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sample Cases -->
+            <div class="sample-cases">
+                <h3 class="section-title">Sample Comparisons</h3>
+                <div class="case-selector">
+                    <select>
+                        <option>Sample 1 - News Article</option>
+                        <option>Sample 2 - Scientific Paper</option>
+                        <option>Sample 3 - Product Description</option>
+                    </select>
+                    <div class="case-navigation">
+                        <button class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                        <span>1 / 10</span>
+                        <button class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="case-comparison">
+                    <div class="original-text">
+                        <h4>Original Text</h4>
+                        <div class="text-content">
+                            <p>The recent advancements in artificial intelligence and machine learning have revolutionized the way we approach complex problems in various domains. From healthcare to finance, transportation to entertainment, AI systems are being deployed to automate processes, generate insights, and create new experiences that were previously impossible. This rapid evolution has prompted discussions about the ethical implications of AI, including concerns about bias, transparency, accountability, and the potential impact on the workforce...</p>
+                        </div>
+                    </div>
+                    <div class="version-outputs">
+                        <div class="version-output winner">
+                            <h4>Text Summarizer v3 <span class="winner-label">Winner</span></h4>
+                            <div class="text-content">
+                                <p><strong>Title:</strong> AI Advancements: Revolution and Ethics</p>
+                                <p><strong>Summary:</strong> AI and machine learning advances have transformed problem-solving across healthcare, finance, transportation, and entertainment by automating processes and generating new insights. This rapid evolution has sparked ethical discussions regarding bias, transparency, accountability, and workforce impact.</p>
+                                <p><strong>Key Points:</strong></p>
+                                <ul>
+                                    <li>AI is revolutionizing multiple domains</li>
+                                    <li>Benefits include automation and new capabilities</li>
+                                    <li>Ethical concerns include bias and workforce impacts</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="version-output">
+                            <h4>Text Summarizer v2</h4>
+                            <div class="text-content">
+                                <p>AI and machine learning advancements have changed how we solve problems in healthcare, finance, transportation and entertainment. These systems automate processes and create new experiences. Ethical concerns about AI include bias, transparency, accountability and workforce impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="recommendations">
+                <h3 class="section-title">AI Recommendations</h3>
+                <div class="recommendation-item">
+                    <div class="recommendation-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="recommendation-content">
+                        <h4>Improve Structure Consistency</h4>
+                        <p>Adding more explicit formatting instructions helped v3 maintain consistent Key Points sections. Consider enhancing this further with numbered requirements.</p>
+                    </div>
+                </div>
+                <div class="recommendation-item">
+                    <div class="recommendation-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="recommendation-content">
+                        <h4>Add Length Parameter</h4>
+                        <p>Making the summary length configurable (currently hardcoded as a percentage) would improve flexibility for different use cases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Past Evaluations List -->
+        <div class="past-evaluations">
+            <h3 class="section-title">Past Evaluations</h3>
+            <div class="evaluation-list">
+                <div class="evaluation-item">
+                    <div class="evaluation-info">
+                        <h4>Code Generator Comparison</h4>
+                        <div class="item-meta">
+                            <span class="meta-item"><i class="fas fa-calendar"></i> June 10, 2024</span>
+                            <span class="meta-item"><i class="fas fa-robot"></i> Claude 3</span>
+                        </div>
+                    </div>
+                    <button class="action-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="evaluation-item">
+                    <div class="evaluation-info">
+                        <h4>SQL Query Generator Test</h4>
+                        <div class="item-meta">
+                            <span class="meta-item"><i class="fas fa-calendar"></i> May 28, 2024</span>
+                            <span class="meta-item"><i class="fas fa-robot"></i> Multiple Models</span>
+                        </div>
+                    </div>
+                    <button class="action-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="evaluation-item">
+                    <div class="evaluation-info">
+                        <h4>Customer Support Response Test</h4>
+                        <div class="item-meta">
+                            <span class="meta-item"><i class="fas fa-calendar"></i> May 15, 2024</span>
+                            <span class="meta-item"><i class="fas fa-robot"></i> GPT-3.5</span>
+                        </div>
+                    </div>
+                    <button class="action-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- App Navigation -->
+    <nav class="app-nav">
+        <a href="dashboard.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="library.html" class="nav-item">
+            <i class="fas fa-folder"></i>
+            <span>Library</span>
+        </a>
+        <a href="editor.html" class="nav-item">
+            <i class="fas fa-code"></i>
+            <span>Editor</span>
+        </a>
+        <a href="evaluation.html" class="nav-item active">
+            <i class="fas fa-flask"></i>
+            <span>Evaluate</span>
+        </a>
+        <a href="community.html" class="nav-item">
+            <i class="fas fa-users"></i>
+            <span>Community</span>
+        </a>
+    </nav>
+</body>
+</html>
+

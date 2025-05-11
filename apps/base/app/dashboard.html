@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | MetaMind Hub</title>
+    <link rel="stylesheet" href="../css/app-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+</head>
+<body>
+    <!-- iOS Status Bar -->
+    <div class="ios-status-bar">
+        <div class="status-left">9:41</div>
+        <div class="status-center">
+            <div class="notch"></div>
+        </div>
+        <div class="status-right">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <h1>Dashboard</h1>
+            <div class="user-profile">
+                <img src="../img/user-profile.jpg" alt="User Profile">
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard-content">
+        <!-- Quick Start Card -->
+        <div class="quick-start card">
+            <div class="card-content">
+                <h2>Quick Start</h2>
+                <div class="quick-actions">
+                    <button class="primary-action">
+                        <i class="fas fa-plus-circle"></i>
+                        Create New Prompt
+                    </button>
+                    <button class="secondary-action">
+                        <i class="fas fa-file-import"></i>
+                        Import Prompt
+                    </button>
+                    <button class="secondary-action">
+                        <i class="fas fa-folder-open"></i>
+                        Browse Templates
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Prompts Card -->
+        <div class="recent-prompts card">
+            <div class="card-header">
+                <h2>Recent Prompts</h2>
+                <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="prompt-list">
+                <div class="prompt-item">
+                    <div class="prompt-info">
+                        <h3 class="prompt-name">Text Summarizer v3</h3>
+                        <p class="prompt-meta">Modified 2 hours ago</p>
+                    </div>
+                    <div class="prompt-actions">
+                        <button class="action-btn"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn"><i class="fas fa-flask"></i></button>
+                        <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-info">
+                        <h3 class="prompt-name">Code Generation Assistant</h3>
+                        <p class="prompt-meta">Modified yesterday</p>
+                    </div>
+                    <div class="prompt-actions">
+                        <button class="action-btn"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn"><i class="fas fa-flask"></i></button>
+                        <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-info">
+                        <h3 class="prompt-name">Sentiment Analyzer v1.2</h3>
+                        <p class="prompt-meta">Modified 3 days ago</p>
+                    </div>
+                    <div class="prompt-actions">
+                        <button class="action-btn"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn"><i class="fas fa-flask"></i></button>
+                        <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Snapshot Card -->
+        <div class="performance-snapshot card">
+            <div class="card-header">
+                <h2>Performance Snapshot</h2>
+                <div class="time-filter">
+                    <select>
+                        <option>Last 7 Days</option>
+                        <option>Last 30 Days</option>
+                        <option>Last 90 Days</option>
+                    </select>
+                </div>
+            </div>
+            <div class="performance-metrics">
+                <div class="metric">
+                    <div class="metric-value">87%</div>
+                    <div class="metric-label">Avg. Accuracy</div>
+                    <div class="metric-trend up">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>5%</span>
+                    </div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">42</div>
+                    <div class="metric-label">Tests Run</div>
+                    <div class="metric-trend up">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>12</span>
+                    </div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">8</div>
+                    <div class="metric-label">Prompts Created</div>
+                    <div class="metric-trend down">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="performance-chart">
+                <!-- Chart placeholder -->
+                <div class="chart-placeholder">
+                    <div class="chart-bar" style="height: 40%;"></div>
+                    <div class="chart-bar" style="height: 70%;"></div>
+                    <div class="chart-bar" style="height: 55%;"></div>
+                    <div class="chart-bar" style="height: 85%;"></div>
+                    <div class="chart-bar" style="height: 65%;"></div>
+                    <div class="chart-bar" style="height: 90%;"></div>
+                    <div class="chart-bar" style="height: 75%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community Activity Card -->
+        <div class="community-activity card">
+            <div class="card-header">
+                <h2>Community Activity</h2>
+                <a href="#" class="view-all">Explore</a>
+            </div>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>New Popular Prompt</h3>
+                        <p>"Image Description Generator" by UserX</p>
+                    </div>
+                    <button class="action-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Challenge of the Week</h3>
+                        <p>Create a multi-language translation prompt</p>
+                    </div>
+                    <button class="action-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>New Resource Published</h3>
+                        <p>Advanced Techniques for Chain-of-Thought Prompting</p>
+                    </div>
+                    <button class="action-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- App Navigation -->
+    <nav class="app-nav">
+        <a href="dashboard.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="library.html" class="nav-item">
+            <i class="fas fa-folder"></i>
+            <span>Library</span>
+        </a>
+        <a href="editor.html" class="nav-item">
+            <i class="fas fa-code"></i>
+            <span>Editor</span>
+        </a>
+        <a href="evaluation.html" class="nav-item">
+            <i class="fas fa-flask"></i>
+            <span>Evaluate</span>
+        </a>
+        <a href="community.html" class="nav-item">
+            <i class="fas fa-users"></i>
+            <span>Community</span>
+        </a>
+    </nav>
+</body>
+</html>
+

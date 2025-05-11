@@ -1,247 +1,751 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="title">WebSim Vibe Coding Starter</title>
-    <meta name="description" content="WebSim Vibe Coding Starter: Build a modern, SEO-optimized website in 5 minutes. AI赋能、极致自动化、响应式、SEO最佳实践、极具创意与未来感的SaaS工具。">
-    <meta name="keywords" content="WebSim, SaaS, Coding Starter, SEO, AI, Playground, 多语言, 创意, 极致体验">
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="css/style.css">
+    <title>MetaMind Hub | Master the Art of AI Prompting</title>
+    <meta name="description" content="MetaMind Hub - The ultimate platform for creating, testing, managing, and optimizing meta prompts for AI models. Elevate your prompt engineering skills.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="js/bootstrap-scripts.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="js/lang.js" defer></script>
-    <script src="js/playground.js" defer></script>
-
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://websimstarter.borninsea.com/"},{"@type":"ListItem","position":2,"name":"首页","item":"https://websimstarter.borninsea.com/"}],"language":"en"}
-    </script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Organization","name":"WebSim Team","url":"https://websimstarter.borninsea.com/about.html","description":"A small, dedicated team passionate about creating innovative web solutions.","logo":"https://websimstarter.borninsea.com/favicon.svg","sameAs":["https://github.com/wanghaisheng/a_websim-website-starter"],"foundingDate":"2023","founders":[{"@type":"Person","name":"Your Name"}],"address":"","contactPoint":[{"@type":"ContactPoint","contactType":"customer support","email":"contact@websimstarter.borninsea.com","telephone":""}],"audience":{"@type":"Audience","audienceType":"创业者, 产品经理, 编程小白"},"language":"zh"}
-    </script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebSite","name":"WebSim Vibe Coding Starter","url":"https://websimstarter.borninsea.com/","description":"WebSim Vibe Coding Starter: Build a modern, SEO-optimized website in 5 minutes. AI赋能、极致自动化、响应式、SEO最佳实践、极具创意与未来感的SaaS工具。","inLanguage":"en","publisher":{"@type":"Organization","name":"WebSim Team"}}
-    </script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="WebSim Logo">
-                  <circle cx="20" cy="20" r="20" fill="url(#paint0_radial_header)"/>
-                  <text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="18" font-family="monospace" dy=".3em">WS</text>
-                  <defs>
-                    <radialGradient id="paint0_radial_header" cx="0.5" cy="0.5" r="0.5" fx="0.2" fy="0.2">
-                      <stop offset="0%" stop-color="#6f00ff"/>
-                      <stop offset="100%" stop-color="#00eaff"/>
-                    </radialGradient>
-                  </defs>
-                </svg>
-                <span class="brand" data-i18n="brand">WebSim Vibe Coding Starter</span>
+    <!-- Nav Bar -->
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="MetaMind Hub Logo">
+                    <span>MetaMind Hub</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                    <div class="language-switcher">
+                        <button id="language-toggle">
+                            <i class="fas fa-globe"></i>
+                            <span>EN</span>
+                        </button>
+                        <div class="language-dropdown">
+                            <a href="#" data-lang="en">English</a>
+                            <a href="#" data-lang="zh">中文</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-buttons">
+                    <a href="#" class="btn btn-secondary">Login</a>
+                    <a href="#" class="btn btn-primary">Sign Up Free</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#features" data-i18n="nav_features">Features</a></li>
-                    <li><a href="#playground" data-i18n="nav_playground">Playground</a></li>
-                    <li><a href="#showcase" data-i18n="nav_showcase">Showcase</a></li>
-                    <li><a href="#future" data-i18n="nav_future">Vision</a></li>
-                    <li><a href="about.html" data-i18n="nav_about">About</a></li>
-                    <li><a href="career.html" data-i18n="nav_career">Career</a></li>
-                    <li class="language-selector">
-                         <div class="lang-switcher" id="lang-switcher"></div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 data-i18n="hero_title">零代码，5分钟上线你的创业网站</h1>
-                <p data-i18n="hero_summary">WebSim Vibe Coding Starter 专为创业者、产品经理和编程经验有限的创新者打造。无需代码基础，5分钟内即可验证你的商业想法，快速上线专业网站。内置 SaaS 工具、游戏类 App 落地页与原型设计提示词模板、SEO 优化 prompt 及常用自动化脚本，助你高效实现从创意到落地。</p>
-                <p data-i18n="hero_subtitle">AI驱动，SEO极致优化，多语言支持，助力创新高效落地。</p>
-                <div class="hero-cta">
-                    <a href="#playground" class="btn btn-primary" data-i18n="cta_try">立即免费试用 | 零代码上线你的创意</a>
+                <h1>Unlock the Power of AI with <span class="gradient-text">Meta Prompts</span></h1>
+                <p>MetaMind Hub is your all-in-one platform for creating, testing, optimizing, and sharing high-performance meta prompts. Maximize your LLM's potential with advanced prompt engineering tools.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary btn-lg">
+                        Start Creating for Free
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#demo" class="btn btn-video">
+                        <i class="fas fa-play-circle"></i>
+                        Watch Demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10,000+</span>
+                        <span class="stat-label">Prompt Engineers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50,000+</span>
+                        <span class="stat-label">Prompts Created</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">87%</span>
+                        <span class="stat-label">Avg. Performance Boost</span>
+                    </div>
                 </div>
             </div>
-            <div class="hero-bg-anim" id="hero-bg-anim"></div>
+            <div class="hero-image">
+                <img src="img/hero-editor-visualization.png" alt="MetaMind Hub Intelligent Prompt Editor Interface" class="main-image">
+                <div class="floating-element element-1">
+                    <img src="img/floating-element-1.svg" alt="AI Assistant">
+                </div>
+                <div class="floating-element element-2">
+                    <img src="img/floating-element-2.svg" alt="Performance Chart">
+                </div>
+            </div>
+        </div>
+        <div class="hero-backdrop"></div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Challenge with AI Prompting Today</h2>
+                <p>As LLMs become more powerful, prompt engineering grows more complex and critical</p>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="icon-container">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    <h3>Trial and Error Approach</h3>
+                    <p>Hours wasted with manual, unstructured experimentation and inconsistent results.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon-container">
+                        <i class="fas fa-clipboard"></i>
+                    </div>
+                    <h3>No Version Control</h3>
+                    <p>Prompts stored in scattered documents with no history tracking or easy comparison.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon-container">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Poor Performance Metrics</h3>
+                    <p>Lack of objective ways to measure and compare prompt effectiveness.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon-container">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Siloed Knowledge</h3>
+                    <p>Teams reinvent prompts without shared repositories or collaborative tools.</p>
+                </div>
+            </div>
+            <div class="testimonial-card problem-testimonial">
+                <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                <p class="quote">"Before MetaMind Hub, I spent 40% of my development time just tweaking prompts through guesswork. There had to be a better way."</p>
+                <div class="testimonial-author">
+                    <img src="img/user-avatar-1.jpg" alt="Alex Chen, AI Developer">
+                    <div class="author-details">
+                        <p class="author-name">Alex Chen</p>
+                        <p class="author-title">AI Developer at TechCorp</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="features" class="features">
+    <!-- Features Section -->
+    <section id="features" class="features-section">
         <div class="container">
-            <h2 data-i18n="features_title">Features</h2>
+            <div class="section-header">
+                <h2>A Complete Meta Prompt Engineering Solution</h2>
+                <p>Everything you need to master prompt engineering in one integrated platform</p>
+            </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3 data-i18n="features.ai_research.title">AI 研究与需求分析</h3>
-                    <p data-i18n="features.ai_research.description">集成 Grok.com，自动挖掘用户痛点、竞品分析。</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Intelligent Meta Prompt Editor</h3>
+                    <p>AI-assisted prompt creation with syntax highlighting, template library, and real-time suggestions to enhance your prompt quality.</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="features.prd_generation.title">PRD 生成</h3>
-                    <p data-i18n="features.prd_generation.description">集成 Google AI Studio，根据用户输入与调研自动生成详细产品需求文档（PRD.md）。</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Prompt Library & Version Control</h3>
+                    <p>Git-like versioning for your prompts with branching, history tracking, and easy rollback capabilities.</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="features.code_generation.title">代码与内容生成</h3>
-                    <p data-i18n="features.code_generation.description">集成 WebSim.com，结合 PRD.md 和 prompt 模板自动生成完整 HTML/CSS/JS 站点。</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Automated Testing & Evaluation</h3>
+                    <p>Rigorously test prompt performance with customizable metrics and A/B testing frameworks to identify winners.</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="features.seo_automation.title">SEO 自动化</h3>
-                    <p data-i18n="features.seo_automation.description">自动生成 sitemap、robots.txt，集成 IndexNow、Bing、Google Search Console API，自动提交和校验。</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Community Hub & Knowledge Base</h3>
+                    <p>Discover high-quality prompts, share your creations, and learn from the collective expertise of our growing community.</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="features.multilingual.title">多语言支持</h3>
-                    <p data-i18n="features.multilingual.description">locale 目录自动生成中英文等多语言 JSON 资源，支持动态切换。</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Team Collaboration Tools</h3>
+                    <p>Work together seamlessly with shared prompt libraries, commenting, and role-based access control for enterprise teams.</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="features.one_click_deploy.title">一键部署</h3>
-                    <p data-i18n="features.one_click_deploy.description">支持 Cloudflare Pages、GitHub Pages 等静态托管，自动化 CI/CD。</p>
-                </div>
-                <div class="feature-card">
-                    <h3 data-i18n="features.no_code.title">无需编程，自动生成全站</h3>
-                    <p data-i18n="features.no_code.description">通过AI和模板，快速生成网站，无需手动编码。</p>
-                </div>
-                <div class="feature-card">
-                    <h3 data-i18n="features.fast_validation.title">5分钟快速验证产品概念</h3>
-                    <p data-i18n="features.fast_validation.description">迅速搭建原型，验证市场需求。</p>
-                </div>
-                 <div class="feature-card">
-                    <h3 data-i18n="features.pwa_mobile.title">PWA & mobile-first, blazing fast</h3>
-                    <p data-i18n="features.pwa_mobile.description">提供卓越的移动体验和性能。</p>
-                </div>
-                <div class="feature-card">
-                    <h3 data-i18n="features.ai_scraper.title">AI Scraper friendly</h3>
-                    <p data-i18n="features.ai_scraper.description">自动生成 robots.txt & llms.txt，优化AI爬虫索引。</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Multi-Model Compatibility</h3>
+                    <p>Test and optimize prompts across different LLMs including GPT-4, Claude, and other popular models.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="playground" class="playground-section">
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
         <div class="container">
-            <h2 data-i18n="playground_title">Try the Interactive Playground</h2>
-            <div class="playground-tabs">
-                <ul class="tab-list">
-                    <li class="tab active" data-tab="step1" data-i18n="tab_grok" tabindex="0">1. Research on Grok</li>
-                    <li class="tab" data-tab="step2" data-i18n="tab_google" tabindex="0">2. Generate PRD.md</li>
-                    <li class="tab" data-tab="step3" data-i18n="tab_websim" tabindex="0">3. Generate Site with WebSim</li>
-                    <li class="tab" data-tab="step4" data-i18n="tab_deploy" tabindex="0">4. Deploy & Go Live</li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane active" id="step1">
-                        <div class="tab-desc">
-                            <div class="desc-main">
-                                <h3 data-i18n="grok_title">Research User Complaints on Grok</h3>
-                                <ul class="desc-features">
-                                    <li data-i18n="grok_feat1">AI-powered search for user pain points</li>
-                                    <li data-i18n="grok_feat2">Real-time trending topics</li>
-                                    <li data-i18n="grok_feat3">Export insights for product ideation</li>
-                                </ul>
-                                <div class="desc-resources">
-                                    <a href="https://grok.x.com/" target="_blank" class="desc-cta btn btn-secondary" data-i18n="grok_cta">Go to Grok.com &rarr;</a>
-                                </div>
-                            </div>
-                            <div class="desc-media">
-                                <img src="https://assets.codeium.com/websim/grok-sample.png" alt="Grok.com Screenshot" loading="lazy" style="max-width:260px;border-radius:12px;box-shadow:0 2px 12px #00eaff44;">
-                            </div>
-                        </div>
-                        <iframe src="https://grok.x.com/" title="Grok.com Research" style="width:100%;height:400px;border-radius:16px;border:none;box-shadow:0 2px 12px #00eaff44;"></iframe>
-                        <p data-i18n="grok_hint">Use Grok to research user pain points and complaints for your SaaS idea. Copy the insights for the next step.</p>
+            <div class="section-header">
+                <h2>How MetaMind Hub Works</h2>
+                <p>A streamlined workflow for prompt engineering excellence</p>
+            </div>
+            <div class="workflow">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create & Import</h3>
+                        <p>Start from scratch with AI assistance, use templates, or import existing prompts.</p>
+                        <img src="img/step1-create.png" alt="Create meta prompts with MetaMind Hub" class="step-image">
                     </div>
-                    <div class="tab-pane" id="step2">
-                        <div class="tab-desc">
-                            <div class="desc-main">
-                                <h3 data-i18n="google_title">Generate PRD.md with Google AI Studio</h3>
-                                <ul class="desc-features">
-                                    <li data-i18n="google_feat1">AI generates detailed PRD.md from research</li>
-                                    <li data-i18n="google_feat2">Starter templates for SaaS, tools, apps</li>
-                                    <li data-i18n="google_feat3">Easy editing and export</li>
-                                </ul>
-                                <div class="desc-resources">
-                                    <a href="https://aistudio.google.com/" target="_blank" class="desc-cta btn btn-secondary" data-i18n="google_cta">Go to Google AI Studio &rarr;</a>
-                                </div>
-                            </div>
-                             <div class="desc-media">
-                                <img src="https://assets.codeium.com/websim/google-ai-studio-sample.png" alt="Google AI Studio Screenshot" loading="lazy" style="max-width:260px;border-radius:12px;box-shadow:0 2px 12px #00eaff44;">
-                            </div>
-                        </div>
-                        <p data-i18n="google_hint">Paste your Grok research into Google AI Studio with a PRD prompt to generate your product requirements. Download as PRD.md.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Test & Evaluate</h3>
+                        <p>Run your prompts against real data and analyze performance with objective metrics.</p>
+                        <img src="img/step2-test.png" alt="Test and evaluate meta prompts" class="step-image">
                     </div>
-                    <div class="tab-pane" id="step3">
-                        <div class="tab-desc">
-                            <div class="desc-main">
-                                <h3 data-i18n="websim_title">Generate Site with WebSim.com</h3>
-                                <ul class="desc-features">
-                                    <li data-i18n="websim_feat1">AI generates full website from PRD.md</li>
-                                    <li data-i18n="websim_feat2">Multiple design templates</li>
-                                    <li data-i18n="websim_feat3">Download HTML, CSS, JS files</li>
-                                </ul>
-                                <div class="desc-resources">
-                                    <a href="https://websim.com/" target="_blank" class="desc-cta btn btn-secondary" data-i18n="websim_cta">Go to WebSim.com &rarr;</a>
-                                </div>
-                            </div>
-                            <div class="desc-media">
-                                <img src="https://assets.codeium.com/websim/websim-sample.png" alt="WebSim.com Screenshot" loading="lazy" style="max-width:260px;border-radius:12px;box-shadow:0 2px 12px #00eaff44;">
-                            </div>
-                        </div>
-                        <p data-i18n="websim_hint">Upload your PRD.md to WebSim, choose a template, and generate your website code.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Optimize & Iterate</h3>
+                        <p>Refine your prompts based on AI suggestions and performance data.</p>
+                        <img src="img/step3-optimize.png" alt="Optimize meta prompts" class="step-image">
                     </div>
-                    <div class="tab-pane" id="step4">
-                        <div class="tab-desc">
-                            <div class="desc-main">
-                                <h3 data-i18n="deploy_title">Deploy & Go Live</h3>
-                                <ul class="desc-features">
-                                    <li data-i18n="deploy_feat1">Easy deployment to Cloudflare Pages, GitHub Pages</li>
-                                    <li data-i18n="deploy_feat2">Automated CI/CD setup</li>
-                                    <li data-i18n="deploy_feat3">Global content delivery network</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p data-i18n="deploy_hint">Place generated files in your project, configure `config.json`, connect to Cloudflare/GitHub, and `git push` to deploy.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Share & Deploy</h3>
+                        <p>Store in your library, share with your team, or contribute to the community.</p>
+                        <img src="img/step4-share.png" alt="Share and deploy meta prompts" class="step-image">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="showcase" class="showcase-section">
+    <!-- Demo Section -->
+    <section id="demo" class="demo-section">
         <div class="container">
-            <h2 data-i18n="showcase_title">Showcase</h2>
-            <p data-i18n="showcase_content">案例展示即将推出，敬请期待！</p>
-            <!-- Placeholder for showcase items -->
-        </div>
-    </section>
-
-    <section id="future" class="future-section">
-        <div class="container">
-            <h2 data-i18n="future_title">未来愿景</h2>
-            <div class="features-grid">
-                 <div class="feature-card">
-                    <h3 data-i18n="future.api.title">支持更多第三方 API</h3>
-                    <p data-i18n="future.api.description">如 Notion、Figma、Midjourney 等，拓展集成能力。</p>
-                </div>
-                <div class="feature-card">
-                    <h3 data-i18n="future.customization.title">支持自定义主题与 UI 组件市场</h3>
-                    <p data-i18n="future.customization.description">提供更丰富的个性化选项和设计资源。</p>
-                </div>
-                <div class="feature-card">
-                    <h3 data-i18n="future.intelligent_updates.title">智能内容更新与 A/B 测试</h3>
-                    <p data-i18n="future.intelligent_updates.description">助力持续优化网站内容和用户体验。</p>
+            <div class="section-header">
+                <h2>See MetaMind Hub in Action</h2>
+                <p>Watch how our platform transforms prompt engineering</p>
+            </div>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <img src="img/demo-thumbnail.jpg" alt="MetaMind Hub Demo Video Thumbnail">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <!-- App Screenshots Section -->
+    <section class="app-screenshots">
         <div class="container">
-            <p data-i18n="footer_copyright">&copy; 2024 WebSim Vibe Coding Starter. All rights reserved.</p>
-            <!-- Add other footer links if needed -->
+            <div class="section-header">
+                <h2>App Experience Preview</h2>
+                <p>Experience our intuitive and powerful interface</p>
+            </div>
+            <div class="screenshots-carousel">
+                <div class="screenshot-slide">
+                    <div class="screenshot-frame">
+                        <iframe src="apps/base/app/dashboard.html" title="Dashboard Preview"></iframe>
+                    </div>
+                    <div class="screenshot-caption">
+                        <h3>Central Dashboard</h3>
+                        <p>Your personal command center for all prompt engineering activities</p>
+                    </div>
+                </div>
+                <div class="screenshot-slide">
+                    <div class="screenshot-frame">
+                        <iframe src="apps/base/app/editor.html" title="Editor Preview"></iframe>
+                    </div>
+                    <div class="screenshot-caption">
+                        <h3>Intelligent Editor</h3>
+                        <p>Powerful tools for crafting the perfect meta prompt</p>
+                    </div>
+                </div>
+                <div class="screenshot-slide">
+                    <div class="screenshot-frame">
+                        <iframe src="apps/base/app/interactive-prompt-tester.html" title="Interactive Prompt Tester Preview"></iframe>
+                    </div>
+                    <div class="screenshot-caption">
+                        <h3>Interactive Prompt Tester</h3>
+                        <p>Test your prompts in real-time with instant AI feedback</p>
+                    </div>
+                </div>
+                <div class="screenshot-slide">
+                    <div class="screenshot-frame">
+                        <iframe src="apps/base/app/evaluation.html" title="Evaluation Preview"></iframe>
+                    </div>
+                    <div class="screenshot-caption">
+                        <h3>Evaluation Center</h3>
+                        <p>Data-driven testing and optimization for your prompts</p>
+                    </div>
+                </div>
+                <div class="screenshot-slide">
+                    <div class="screenshot-frame">
+                        <iframe src="apps/base/app/community.html" title="Community Preview"></iframe>
+                    </div>
+                    <div class="screenshot-caption">
+                        <h3>Community Hub</h3>
+                        <p>Discover and share top-performing prompts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-control prev" aria-label="Previous screenshot">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="carousel-control next" aria-label="Next screenshot">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="onboarding-preview">
+                <a href="apps/base/onboarding-preview/welcome.html" class="btn btn-secondary btn-lg" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    Open Full App Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by Prompt Engineers Worldwide</h2>
+                <p>Join thousands of professionals who've transformed their AI workflow</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"MetaMind Hub cut our prompt development time in half and improved our model outputs by 40%. The version control and testing frameworks are game-changers."</p>
+                    <div class="testimonial-author">
+                        <img src="img/user-avatar-2.jpg" alt="Priya Sharma">
+                        <div class="author-details">
+                            <p class="author-name">Priya Sharma</p>
+                            <p class="author-title">Lead AI Engineer, FutureTech</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"As a prompt engineering instructor, I recommend MetaMind Hub to all my students. The learning curve for advanced prompting is so much smoother with their tools."</p>
+                    <div class="testimonial-author">
+                        <img src="img/user-avatar-3.jpg" alt="James Wilson">
+                        <div class="author-details">
+                            <p class="author-name">James Wilson</p>
+                            <p class="author-title">AI Course Instructor, Tech Academy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="quote">"Our research team uses MetaMind Hub for all LLM experiments now. The ability to objectively compare different prompt strategies has accelerated our publication output."</p>
+                    <div class="testimonial-author">
+                        <img src="img/user-avatar-4.jpg" alt="Dr. Maya Rodriguez">
+                        <div class="author-details">
+                            <p class="author-name">Dr. Maya Rodriguez</p>
+                            <p class="author-title">AI Researcher, National University</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="company-logos">
+                <h3>Used by teams at</h3>
+                <div class="logos-container">
+                    <img src="img/company-logo-1.svg" alt="TechCorp">
+                    <img src="img/company-logo-2.svg" alt="AI Innovations">
+                    <img src="img/company-logo-3.svg" alt="DataFlow Systems">
+                    <img src="img/company-logo-4.svg" alt="Neural Solutions">
+                    <img src="img/company-logo-5.svg" alt="FutureAI">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your prompt engineering needs</p>
+            </div>
+            <div class="pricing-toggle">
+                <span>Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billing-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Annual <span class="discount-badge">Save 20%</span></span>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3>Solo Developer</h3>
+                        <div class="price" data-monthly="$0" data-annual="$0">$0</div>
+                        <div class="billing-period">Free forever</div>
+                    </div>
+                    <div class="pricing-card-body">
+                        <ul class="pricing-features">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Basic Meta Prompt Editor</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Personal Prompt Library (up to 20 prompts)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Manual Testing Tools</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Community Access (read-only)</span>
+                            </li>
+                            <li class="feature-disabled">
+                                <i class="fas fa-times"></i>
+                                <span>Team Collaboration</span>
+                            </li>
+                            <li class="feature-disabled">
+                                <i class="fas fa-times"></i>
+                                <span>A/B Testing Framework</span>
+                            </li>
+                            <li class="feature-disabled">
+                                <i class="fas fa-times"></i>
+                                <span>Advanced Analytics</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <a href="#" class="btn btn-secondary btn-block">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-card-header">
+                        <h3>Professional</h3>
+                        <div class="price" data-monthly="$29" data-annual="$23">$29</div>
+                        <div class="billing-period">per user/month</div>
+                    </div>
+                    <div class="pricing-card-body">
+                        <ul class="pricing-features">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Full-featured Editor with AI Assistance</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Expanded Library (unlimited prompts)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Automated Testing & A/B Framework</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Full Community Access</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Team Collaboration (up to 5 members)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>API Access</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Basic Analytics Dashboard</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <a href="#" class="btn btn-primary btn-block">Start 14-day Free Trial</a>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">Custom</div>
+                        <div class="billing-period">tailored to your needs</div>
+                    </div>
+                    <div class="pricing-card-body">
+                        <ul class="pricing-features">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>All Professional features</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Unlimited team members</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Advanced security controls</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Role-based access control</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Audit logs & compliance features</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Custom integrations</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Dedicated support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <a href="#" class="btn btn-tertiary btn-block">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+            <div class="compare-plans">
+                <a href="#" class="compare-link">
+                    Compare all plan features
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Master Meta Prompts?</h2>
+                <p>Join thousands of engineers and researchers who've already transformed their AI workflows.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-lg">
+                        Start for Free
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#" class="btn btn-secondary btn-lg">
+                        Schedule a Demo
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>No credit card required</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Free tier forever</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Cancel anytime</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-image">
+                <img src="img/cta-graphic.svg" alt="Start your meta prompt engineering journey">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about MetaMind Hub</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What exactly is a meta prompt?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A meta prompt is an advanced, structured prompt designed to guide LLMs more effectively than simple queries. It typically contains multiple elements like role definitions, context, task instructions, output formatting, and chain-of-thought guidance. Meta prompts help achieve more reliable, high-quality outputs from AI models.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Which AI models does MetaMind Hub support?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>MetaMind Hub supports all major LLM models including OpenAI's GPT-4 and GPT-3.5, Anthropic's Claude models, Meta's LLaMA-based models, and more. We're constantly adding support for new models as they emerge.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the testing and evaluation work?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our platform allows you to define custom evaluation datasets and metrics (accuracy, relevance, toxicity, etc.) for your prompts. You can run automated tests against these datasets, compare different prompt versions, and get objective performance measurements to determine which prompts perform best for your specific use case.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my data secure on MetaMind Hub?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we take security seriously. Your prompt data is encrypted both in transit and at rest. We never use your private prompts to train our systems. Enterprise plans include additional security features like SSO, audit logs, and compliance certifications. For details, please review our security documentation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I use MetaMind Hub with my own API keys?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! You can connect MetaMind Hub to your own API keys for various LLM providers. This gives you full control over your usage and costs, while still benefiting from our prompt engineering tools and features.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the Community Hub work?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The Community Hub is where users can share and discover high-quality prompts. You can browse prompts by category, task type, or popularity. When you find a prompt you like, you can import it to your personal library, modify it, and build upon it. You can also publish your own prompts to contribute to the community.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="more-questions">
+                <p>Still have questions? <a href="#" class="contact-link">Contact our support team</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column brand-column">
+                    <div class="footer-logo">
+                        <img src="img/logo-white.svg" alt="MetaMind Hub Logo">
+                        <span>MetaMind Hub</span>
+                    </div>
+                    <p class="footer-tagline">Elevate your AI interactions with advanced meta prompt engineering tools</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Prompt Engineering Guide</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                        <li><a href="#">Tutorials & Webinars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MetaMind Hub. All rights reserved.</p>
+                <div class="language-selector">
+                    <select id="footer-language-selector">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Newsletter Signup -->
+    <div class="newsletter-popup">
+        <div class="newsletter-content">
+            <button class="close-newsletter"><i class="fas fa-times"></i></button>
+            <h3>Stay Updated on Prompt Engineering</h3>
+            <p>Subscribe to our newsletter for the latest tips, trends, and updates.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <p class="newsletter-disclaimer">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
